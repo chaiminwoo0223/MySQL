@@ -1,0 +1,1 @@
+CREATE INDEX idx_member_name ON member(member_name);
