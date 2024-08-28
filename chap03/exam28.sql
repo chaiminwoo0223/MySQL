@@ -1,0 +1,3 @@
+USE market_db;
+
+SELECT LAST_INSERT_ID();
