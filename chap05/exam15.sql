@@ -1,0 +1,14 @@
+USE naver_db;
+
+DROP TABLE IF EXISTS member;
+CREATE TABLE member
+(mem_id CHAR(8) NOT NULL PRIMARY KEY,
+mem_name VARCHAR(10) NOT NULL,
+height TINYINT UNSIGNED NULL CHECK(height >= 100),
+phone1 CHAR(3) NULL
+);
+ALTER TABLE member
+ADD CONSTRAINT
+CHECK(phone1 IN("02", "031", "032", "054", "055", "061"));
+
+INSERT INTO member VALUES("TWC", "트와이스", 167, "02");

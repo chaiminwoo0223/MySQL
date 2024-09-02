@@ -1,0 +1,14 @@
+USE naver_db;
+
+DROP TABLE IF EXISTS buy, member;
+CREATE TABLE member
+(mem_id CHAR(8) NOT NULL PRIMARY KEY,
+mem_name VARCHAR(10) NOT NULL,
+height TINYINT UNSIGNED NULL
+);
+CREATE TABLE buy
+(num INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+user_id CHAR(8) NOT NULL,
+prod_name CHAR(6) NOT NULL,
+FOREIGN KEY(user_id) REFERENCES member(mem_id)
+);
