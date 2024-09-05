@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS solo_db;
+CREATE DATABASE solo_db;
